@@ -6,7 +6,7 @@ import winwin.customer.app.MVVMApplication;
 import winwin.customer.app.data.Repository;
 import winwin.customer.app.ui.base.activity.BaseViewModel;
 
-public class EditProfileViewModel extends BaseViewModel {
+public class EditProfileViewModel extends BaseViewModel{
 
     public ObservableField<String> avatar = new ObservableField<>();
     public ObservableField<String> fullName = new ObservableField<>();

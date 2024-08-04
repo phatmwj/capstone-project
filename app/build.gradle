@@ -175,6 +175,9 @@ dependencies {
 
     implementation 'de.hdodenhof:circleimageview:3.1.0'
 
+    //Picker Image
+    implementation ("com.github.dhaval2404:imagepicker:2.1")
+
 
 }
 apply plugin: 'com.google.gms.google-services'

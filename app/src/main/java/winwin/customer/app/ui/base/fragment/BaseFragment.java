@@ -14,6 +14,7 @@ import androidx.databinding.ObservableBoolean;
 import androidx.databinding.ViewDataBinding;
 import androidx.fragment.app.Fragment;
 
+import winwin.customer.app.BR;
 import winwin.customer.app.MVVMApplication;
 import winwin.customer.app.R;
 import winwin.customer.app.di.component.DaggerFragmentComponent;
@@ -41,6 +42,7 @@ public abstract class BaseFragment<B extends ViewDataBinding, V extends BaseFrag
         performDependencyInjection(getBuildComponent());
         binding = DataBindingUtil.inflate(inflater, getLayoutId(), container, false);
         binding.setVariable(getBindingVariable(), viewModel);
+        binding.setVariable(BR.f, this);
         performDataBinding();
         viewModel.setToken(token);
         viewModel.mErrorMessage.observe(getViewLifecycleOwner(), toastMessage -> {
