@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">winwin customer</string>
+    <string name="msg_loading">Xin chờ...</string>
+
+    <!--Network error-->
+    <string name="newtwork_error">Không thể kết nối, vui lòng kiểm tra kết nối mạng của bạn.</string>
+    <string name="newtwork_error_button_retry">Thử lại</string>
+    <string name="newtwork_error_button_exit">Thoát</string>
+    <string name="empty_user_pass">Username and password can not be empty</string>
+    <string name="wrong_user_pass">Wrong username or password</string>
+    <string name="login">Login</string>
+    <string name="username">Username</string>
+    <string name="password_hint">Password</string>
+
+    <string name="location_request">Sử dụng vị trí của bạn và cho phép nhận thông báo</string>
+    <string name="location_description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</string>
+    <string name="welcome_winwin">Welcome to Winwin</string>
+    <string name="please_enter_phone">Vui lòng nhập số điện thoại của bạn</string>
+    <string name="welcome_button_continue">Tiếp tục</string>
+    <string name="your_phone_number">Số điện thoại của bạn</string>
+    <string name="otp">OTP</string>
+    <string name="new_password">Mật khẩu mới</string>
+    <string name="new_password_subtext">Sử dụng mật khẩu để bảo vệ tài khoản và đăng nhập lại nhanh chóng</string>
+    <string name="show_new_password">Hiện mật khẩu</string>
+    <string name="title_home">Trang chủ</string>
+    <string name="title_favorite">Yêu thích</string>
+    <string name="title_activity">Hoạt động</string>
+    <string name="title_account">Tài khoản</string>
+    <string name="hello_account">Hello, Nguyen</string>
+    <string name="winwin_hello">WinWin xin chào</string>
+    <string name="search_hint">Tìm kiếm trên ứng dụng</string>
+    <string name="propose">Đề xuất cho bạn</string>
+    <string name="show_all">Xem tất cả</string>
+    <string name="popular_food">Phổ biến</string>
+    <string name="rating_star_value">4.9</string>
+    <string name="food_price">30.000đ - 50.000đ</string>
+    <string name="kilomet_value">2.0 km</string>
+</resources>

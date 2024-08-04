@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+<data>
+    <variable
+        name="ivm"
+        type="winwin.customer.app.data.model.api.response.Food" />
+</data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="@dimen/_107sdp"
+        android:layout_height="@dimen/_124sdp"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="@dimen/_7sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginBottom="@dimen/_4sdp"
+            tools:ignore="MissingConstraints"
+            >
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/_4sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center|top"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_4sdp">
+
+                    <ImageView
+                        android:id="@+id/imgProduct"
+                        android:layout_width="@dimen/_77sdp"
+                        android:layout_height="@dimen/_55sdp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/product">
+
+                    </ImageView>
+
+                    <TextView
+                        style="@style/roboto_bold"
+                        android:id="@+id/txtProduct"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:text="@{ivm.name}"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:maxEms="8"
+                        android:textColor="@color/black">
+                    </TextView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="@dimen/_3sdp">
+                        <TextView
+                            android:id="@+id/textView4"
+                            style="@style/roboto_bold"
+                            android:layout_width="@dimen/_50sdp"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_icon_location"
+                            android:text="@string/kilomet_value"
+                            android:textColor="@color/text_small_color"
+                            android:textSize="@dimen/_7ssp" />
+
+                        <TextView
+                            style="@style/roboto_bold"
+                            android:id="@+id/textView3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:drawableLeft="@drawable/ic_icon_star"
+                            android:text="@string/rating_star_value"
+                            android:textColor="@color/text_small_color"
+                            android:textSize="@dimen/_7ssp"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txtPrice"
+                        style="@style/roboto_bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:ellipsize="end"
+                        android:maxEms="8"
+                        android:maxLines="1"
+                        android:text='@string/food_price'
+                        android:textColor="@color/green_light"
+                        android:textSize="@dimen/_9ssp"></TextView>
+
+                </LinearLayout>
+            </FrameLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
