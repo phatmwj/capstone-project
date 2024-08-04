@@ -1,6 +1,7 @@
 package winwin.customer.app.ui.fragment.home;
 
 import android.util.Log;
+import android.view.View;
 
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -17,6 +18,7 @@ import winwin.customer.app.data.model.api.response.Food;
 import winwin.customer.app.databinding.FragmentHomeBinding;
 import winwin.customer.app.di.component.FragmentComponent;
 import winwin.customer.app.ui.base.fragment.BaseFragment;
+import winwin.customer.app.ui.dialog.BottomSheetDialog;
 import winwin.customer.app.ui.fragment.home.adapter.BannerAdapter;
 import winwin.customer.app.ui.fragment.home.adapter.CategoryAdapter;
 import winwin.customer.app.ui.fragment.home.adapter.FoodAdapter;
@@ -113,5 +115,24 @@ public class HomeFragment extends BaseFragment<FragmentHomeBinding, HomeFragment
         foodAdapter.setOnItemClickListener(food -> {
 
         });
+    }
+
+    /**
+     * showing bottom sheet dialog fragment
+     * same layout is used in both dialog and dialog fragment
+     */
+    public void showBottomSheetDialogFragment() {
+        BottomSheetDialog dialog = new BottomSheetDialog();
+        dialog.show(getChildFragmentManager(), "bottomSheetDialog");
+    }
+
+    /**
+     * showing bottom sheet dialog
+     */
+    public void showBottomSheetDialog() {
+        View view = getLayoutInflater().inflate(R.layout.layout_bottem_sheet, null);
+        com.google.android.material.bottomsheet.BottomSheetDialog dialog = new com.google.android.material.bottomsheet.BottomSheetDialog(getContext());
+        dialog.setContentView(view);
+        dialog.show();
     }
 }

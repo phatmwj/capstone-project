@@ -15,13 +15,21 @@
         <import type="android.view.View" />
     </data>
 
-    <FrameLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <Button
+            android:onClick="@{()->a.showBottomSheetDialogFragment()}"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            />
-    </FrameLayout>
+            android:layout_height="wrap_content"
+            android:text="showBottomSheetDialogFragment"/>
+        <Button
+            android:onClick="@{()->a.showBottomSheetDialog()}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="showBottomSheetDialog"/>
+    </LinearLayout>
 </layout>

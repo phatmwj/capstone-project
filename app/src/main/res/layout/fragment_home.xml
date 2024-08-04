@@ -70,7 +70,7 @@
                     >
 
                     <ImageButton
-                        android:onClick="@{(v)->vm.openNotification()}"
+                        android:onClick="@{(v)->f.showBottomSheetDialog()}"
                         android:id="@+id/imgBtnNotification"
                         android:layout_height="match_parent"
                         android:layout_width="match_parent"
@@ -165,7 +165,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/txtSg"
                     tools:itemCount="1"
-                    tools:listitem="@layout/item_food"></androidx.recyclerview.widget.RecyclerView>
+                    tools:listitem="@layout/item_food" />
 
 
                 <TextView
