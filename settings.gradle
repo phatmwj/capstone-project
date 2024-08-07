@@ -1,2 +1,2 @@
 include ':app'
-rootProject.name = "winwin.customer.app"
+rootProject.name = "MyApp"

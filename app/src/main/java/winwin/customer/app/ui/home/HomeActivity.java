@@ -10,12 +10,14 @@ import androidx.annotation.Nullable;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
+import timber.log.Timber;
 import winwin.customer.app.BR;
 import winwin.customer.app.R;
 import winwin.customer.app.databinding.ActivityHomeBinding;
 import winwin.customer.app.di.component.ActivityComponent;
 import winwin.customer.app.ui.base.activity.BaseActivity;
 import winwin.customer.app.ui.fragment.home.HomeFragment;
+import winwin.customer.app.ui.rxjava.ObservableTester;
 
 public class HomeActivity extends BaseActivity<ActivityHomeBinding, HomeViewModel>
         implements NavigationBarView.OnItemSelectedListener{
@@ -40,6 +42,11 @@ public class HomeActivity extends BaseActivity<ActivityHomeBinding, HomeViewMode
         super.onCreate(savedInstanceState);
         viewBinding.navigationView.setOnItemSelectedListener(this);
         viewBinding.navigationView.setSelectedItemId(R.id.home);
+//        try {
+//            ObservableTester.Test();
+//        }catch (Throwable e){
+//            Timber.d(e);
+//        }
     }
 
     @Override

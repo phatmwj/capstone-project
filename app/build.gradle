@@ -14,8 +14,9 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
-        buildConfigField "String", "BASE_URL", "\"https://update.digibes.de/\""
+//        buildConfigField "String", "BASE_URL", "\"https://update.digibes.de/\""
         buildConfigField "String", "UPDATE_URL", "\"https://update.digibes.de/qrlive/qrcode_random.txt\""
+        buildConfigField "String", "BASE_URL", "\"https://fm-api.developteam.net/\""
         javaCompileOptions {
             annotationProcessorOptions {
                 arguments += ["room.schemaLocation": "$projectDir/schemas".toString()]
@@ -178,6 +179,7 @@ dependencies {
     //Picker Image
     implementation ("com.github.dhaval2404:imagepicker:2.1")
 
+    implementation 'commons-validator:commons-validator:1.7'
 
 }
 apply plugin: 'com.google.gms.google-services'

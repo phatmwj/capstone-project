@@ -17,6 +17,7 @@ import winwin.customer.app.ui.main.MainViewModel;
 import winwin.customer.app.ui.otp.ForgetPasswordOTPViewModel;
 import winwin.customer.app.ui.otp.LoginOTPViewModel;
 import winwin.customer.app.ui.profile.EditProfileViewModel;
+import winwin.customer.app.ui.rxjava.TestViewModel;
 import winwin.customer.app.ui.welcome.WelcomeViewModel;
 import winwin.customer.app.ui.splashform.SplashFormViewModel;
 import winwin.customer.app.utils.GetInfo;
@@ -120,5 +121,13 @@ public class ActivityModule {
         Supplier<HomeViewModel> supplier = () -> new HomeViewModel(repository, (MVVMApplication) application);
         ViewModelProviderFactory<HomeViewModel> factory = new ViewModelProviderFactory<>(HomeViewModel.class, supplier);
         return new ViewModelProvider(activity, factory).get(HomeViewModel.class);
+    }
+
+    @Provides
+    @ActivityScope
+    TestViewModel provideTestViewModel(Repository repository, Context application) {
+        Supplier<TestViewModel> supplier = () -> new TestViewModel(repository, (MVVMApplication) application);
+        ViewModelProviderFactory<TestViewModel> factory = new ViewModelProviderFactory<>(TestViewModel.class, supplier);
+        return new ViewModelProvider(activity, factory).get(TestViewModel.class);
     }
 }

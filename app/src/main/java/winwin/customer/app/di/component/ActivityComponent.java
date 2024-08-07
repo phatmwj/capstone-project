@@ -10,6 +10,7 @@ import dagger.Component;
 import winwin.customer.app.ui.otp.ForgetPasswordOTPActivity;
 import winwin.customer.app.ui.otp.LoginOTPActivity;
 import winwin.customer.app.ui.profile.EditProfileActivity;
+import winwin.customer.app.ui.rxjava.TestActivity;
 import winwin.customer.app.ui.welcome.WelcomeActivity;
 import winwin.customer.app.ui.input.phone.PhoneActivity;
 import winwin.customer.app.ui.splashform.SplashFormActivity;
@@ -30,5 +31,6 @@ public interface ActivityComponent {
     void inject(ForgetPasswordOTPActivity forgetPasswordOTPActivity);
 
     void inject(HomeActivity homeActivity);
+    void inject(TestActivity testActivity);
 }
 
