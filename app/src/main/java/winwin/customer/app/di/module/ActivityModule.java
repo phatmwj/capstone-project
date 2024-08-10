@@ -10,6 +10,7 @@ import winwin.customer.app.ViewModelProviderFactory;
 import winwin.customer.app.data.Repository;
 import winwin.customer.app.di.scope.ActivityScope;
 import winwin.customer.app.ui.base.activity.BaseActivity;
+import winwin.customer.app.ui.edittext.EdittextViewModel;
 import winwin.customer.app.ui.home.HomeViewModel;
 import winwin.customer.app.ui.input.phone.PhoneViewModel;
 import winwin.customer.app.ui.login.LoginViewModel;
@@ -129,5 +130,13 @@ public class ActivityModule {
         Supplier<TestViewModel> supplier = () -> new TestViewModel(repository, (MVVMApplication) application);
         ViewModelProviderFactory<TestViewModel> factory = new ViewModelProviderFactory<>(TestViewModel.class, supplier);
         return new ViewModelProvider(activity, factory).get(TestViewModel.class);
+    }
+
+    @Provides
+    @ActivityScope
+    EdittextViewModel provideEdittextViewModel(Repository repository, Context application) {
+        Supplier<EdittextViewModel> supplier = () -> new EdittextViewModel(repository, (MVVMApplication) application);
+        ViewModelProviderFactory<EdittextViewModel> factory = new ViewModelProviderFactory<>(EdittextViewModel.class, supplier);
+        return new ViewModelProvider(activity, factory).get(EdittextViewModel.class);
     }
 }

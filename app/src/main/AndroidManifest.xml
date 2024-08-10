@@ -80,6 +80,11 @@
 
         </activity>
         <activity
+            android:name=".ui.edittext.EdittextActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize|stateHidden"
+            android:theme="@style/Welcome"/>
+        <activity
             android:name=".ui.rxjava.TestActivity"
             android:launchMode="singleTop"
             android:exported="true"

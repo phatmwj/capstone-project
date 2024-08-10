@@ -2,6 +2,7 @@ package winwin.customer.app.di.component;
 
 import winwin.customer.app.di.module.ActivityModule;
 import winwin.customer.app.di.scope.ActivityScope;
+import winwin.customer.app.ui.edittext.EdittextActivity;
 import winwin.customer.app.ui.home.HomeActivity;
 import winwin.customer.app.ui.login.LoginActivity;
 import winwin.customer.app.ui.main.MainActivity;
@@ -32,5 +33,6 @@ public interface ActivityComponent {
 
     void inject(HomeActivity homeActivity);
     void inject(TestActivity testActivity);
+    void inject(EdittextActivity edittextActivity);
 }
 
