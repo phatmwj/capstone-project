@@ -6,7 +6,7 @@ import android.os.Handler;
 
 import androidx.annotation.Nullable;
 
-import eu.davidea.flexibleadapter.databinding.BR;
+import winwin.customer.app.BR;
 import winwin.customer.app.R;
 import winwin.customer.app.databinding.ActivitySplashFormBinding;
 import winwin.customer.app.di.component.ActivityComponent;

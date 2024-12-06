@@ -15,6 +15,7 @@ import winwin.customer.app.ui.home.HomeViewModel;
 import winwin.customer.app.ui.input.phone.PhoneViewModel;
 import winwin.customer.app.ui.login.LoginViewModel;
 import winwin.customer.app.ui.main.MainViewModel;
+import winwin.customer.app.ui.mqtt.MQTTViewModel;
 import winwin.customer.app.ui.otp.ForgetPasswordOTPViewModel;
 import winwin.customer.app.ui.otp.LoginOTPViewModel;
 import winwin.customer.app.ui.profile.EditProfileViewModel;
@@ -138,5 +139,13 @@ public class ActivityModule {
         Supplier<EdittextViewModel> supplier = () -> new EdittextViewModel(repository, (MVVMApplication) application);
         ViewModelProviderFactory<EdittextViewModel> factory = new ViewModelProviderFactory<>(EdittextViewModel.class, supplier);
         return new ViewModelProvider(activity, factory).get(EdittextViewModel.class);
+    }
+
+    @Provides
+    @ActivityScope
+    MQTTViewModel provideMQTTViewModel(Repository repository, Context application) {
+        Supplier<MQTTViewModel> supplier = () -> new MQTTViewModel(repository, (MVVMApplication) application);
+        ViewModelProviderFactory<MQTTViewModel> factory = new ViewModelProviderFactory<>(MQTTViewModel.class, supplier);
+        return new ViewModelProvider(activity, factory).get(MQTTViewModel.class);
     }
 }

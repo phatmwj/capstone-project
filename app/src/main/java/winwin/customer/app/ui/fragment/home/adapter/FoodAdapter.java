@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-import eu.davidea.flexibleadapter.databinding.BR;
+import winwin.customer.app.BR;
 import winwin.customer.app.data.model.api.response.Food;
 import winwin.customer.app.databinding.ItemFoodBinding;
 

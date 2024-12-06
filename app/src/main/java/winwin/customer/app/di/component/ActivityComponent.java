@@ -8,6 +8,7 @@ import winwin.customer.app.ui.login.LoginActivity;
 import winwin.customer.app.ui.main.MainActivity;
 
 import dagger.Component;
+import winwin.customer.app.ui.mqtt.MQTTActivity;
 import winwin.customer.app.ui.otp.ForgetPasswordOTPActivity;
 import winwin.customer.app.ui.otp.LoginOTPActivity;
 import winwin.customer.app.ui.profile.EditProfileActivity;
@@ -34,5 +35,7 @@ public interface ActivityComponent {
     void inject(HomeActivity homeActivity);
     void inject(TestActivity testActivity);
     void inject(EdittextActivity edittextActivity);
+
+    void inject(MQTTActivity mqttActivity);
 }
 

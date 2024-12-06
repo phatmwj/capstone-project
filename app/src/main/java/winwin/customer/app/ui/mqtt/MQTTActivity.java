@@ -1,23 +1,16 @@
-package winwin.customer.app.ui.input.phone;
+package winwin.customer.app.ui.mqtt;
 
-import android.os.Bundle;
 
 import winwin.customer.app.BR;
 import winwin.customer.app.R;
-import winwin.customer.app.databinding.ActivityPhoneBinding;
+import winwin.customer.app.databinding.ActivityMqttBinding;
 import winwin.customer.app.di.component.ActivityComponent;
 import winwin.customer.app.ui.base.activity.BaseActivity;
 
-public class PhoneActivity extends BaseActivity<ActivityPhoneBinding, PhoneViewModel> {
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-    }
-
+public class MQTTActivity extends BaseActivity<ActivityMqttBinding, MQTTViewModel> {
     @Override
     public int getLayoutId() {
-        return R.layout.activity_phone;
+        return R.layout.activity_mqtt;
     }
 
     @Override
@@ -29,5 +22,4 @@ public class PhoneActivity extends BaseActivity<ActivityPhoneBinding, PhoneViewM
     public void performDependencyInjection(ActivityComponent buildComponent) {
         buildComponent.inject(this);
     }
-
 }
