@@ -98,6 +98,12 @@
             android:name=".ui.mqtt.MQTTActivity"
             android:launchMode="singleTop"
             android:exported="true"/>
+        <activity android:name=".ui.chart.ChartActivity"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="adjustNothing"
+            android:screenOrientation="userLandscape"
+            android:exported="true">
+        </activity>
         <activity
             android:name=".ui.login.LoginActivity"
             android:windowSoftInputMode="adjustResize|stateHidden">

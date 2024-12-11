@@ -10,6 +10,7 @@ import winwin.customer.app.ViewModelProviderFactory;
 import winwin.customer.app.data.Repository;
 import winwin.customer.app.di.scope.ActivityScope;
 import winwin.customer.app.ui.base.activity.BaseActivity;
+import winwin.customer.app.ui.chart.ChartViewModel;
 import winwin.customer.app.ui.edittext.EdittextViewModel;
 import winwin.customer.app.ui.home.HomeViewModel;
 import winwin.customer.app.ui.input.phone.PhoneViewModel;
@@ -147,5 +148,13 @@ public class ActivityModule {
         Supplier<MQTTViewModel> supplier = () -> new MQTTViewModel(repository, (MVVMApplication) application);
         ViewModelProviderFactory<MQTTViewModel> factory = new ViewModelProviderFactory<>(MQTTViewModel.class, supplier);
         return new ViewModelProvider(activity, factory).get(MQTTViewModel.class);
+    }
+
+    @Provides
+    @ActivityScope
+    ChartViewModel provideChartViewModel(Repository repository, Context application) {
+        Supplier<ChartViewModel> supplier = () -> new ChartViewModel(repository, (MVVMApplication) application);
+        ViewModelProviderFactory<ChartViewModel> factory = new ViewModelProviderFactory<>(ChartViewModel.class, supplier);
+        return new ViewModelProvider(activity, factory).get(ChartViewModel.class);
     }
 }
