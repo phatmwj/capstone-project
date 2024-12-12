@@ -37,9 +37,11 @@ import winwin.customer.app.R;
 import winwin.customer.app.databinding.ActivityChartBinding;
 import winwin.customer.app.di.component.ActivityComponent;
 import winwin.customer.app.ui.base.activity.BaseActivity;
+import winwin.customer.app.ui.chart.custom.CustomValueFormatter;
 import winwin.customer.app.ui.chart.custom.DayAxisValueFormatter;
 import winwin.customer.app.ui.chart.custom.My2AxisValueFormatter;
 import winwin.customer.app.ui.chart.custom.MyAxisValueFormatter;
+import winwin.customer.app.ui.chart.custom.XYMarkerView;
 
 public class ChartActivity extends BaseActivity<ActivityChartBinding, ChartViewModel> {
     BarChart chart;
@@ -228,9 +230,9 @@ public class ChartActivity extends BaseActivity<ActivityChartBinding, ChartViewM
         l.setTextSize(11f);
         l.setXEntrySpace(4f);
 
-//        XYMarkerView mv = new XYMarkerView(this, xAxisFormatter);
-//        mv.setChartView(chart); // For bounds control
-//        chart.setMarker(mv); // Set the marker to the chart
+        XYMarkerView mv = new XYMarkerView(this, xAxisFormatter);
+        mv.setChartView(chart); // For bounds control
+        chart.setMarker(mv); // Set the marker to the chart
 
         // setting data
 //        seekBarY.setProgress(50);
@@ -272,12 +274,14 @@ public class ChartActivity extends BaseActivity<ActivityChartBinding, ChartViewM
 
             set1.setAxisDependency(YAxis.AxisDependency.LEFT);
             set2.setAxisDependency(YAxis.AxisDependency.RIGHT);
+            set2.setValueFormatter(new CustomValueFormatter());
 
             ArrayList<IBarDataSet> dataSets = new ArrayList<>();
             dataSets.add(set1);
             dataSets.add(set2);
 
             BarData data = new BarData(dataSets);
+//            data.setValueFormatter(new CustomValueFormatter());
             data.setBarWidth(0.3f); // Set độ rộng của cột
 
             chart.setData(data);
@@ -424,6 +428,7 @@ public class ChartActivity extends BaseActivity<ActivityChartBinding, ChartViewM
             set2.setFillColor(Color.RED);
             set2.setDrawCircleHole(false);
             set2.setHighLightColor(Color.rgb(244, 117, 117));
+            set2.setValueFormatter(new CustomValueFormatter());
             //set2.setFillFormatter(new MyFillFormatter(900f));
 
             // create a data object with the data sets

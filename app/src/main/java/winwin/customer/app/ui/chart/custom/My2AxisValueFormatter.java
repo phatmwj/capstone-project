@@ -1,5 +1,6 @@
 package winwin.customer.app.ui.chart.custom;
 
+import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.formatter.ValueFormatter;
 
 import java.text.DecimalFormat;
@@ -16,5 +17,11 @@ public class My2AxisValueFormatter extends ValueFormatter {
     public String getFormattedValue(float value) {
         return String.valueOf((int) value) + " đh";
     }
+
+    @Override
+    public String getPointLabel(Entry entry) {
+        return String.valueOf((int) entry.getY());
+    }
+
 }
 
