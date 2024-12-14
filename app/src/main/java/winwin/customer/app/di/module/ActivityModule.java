@@ -12,6 +12,7 @@ import winwin.customer.app.di.scope.ActivityScope;
 import winwin.customer.app.ui.base.activity.BaseActivity;
 import winwin.customer.app.ui.chart.ChartViewModel;
 import winwin.customer.app.ui.edittext.EdittextViewModel;
+import winwin.customer.app.ui.flexibleadapter.TableMappingViewModel;
 import winwin.customer.app.ui.home.HomeViewModel;
 import winwin.customer.app.ui.input.phone.PhoneViewModel;
 import winwin.customer.app.ui.login.LoginViewModel;
@@ -156,5 +157,13 @@ public class ActivityModule {
         Supplier<ChartViewModel> supplier = () -> new ChartViewModel(repository, (MVVMApplication) application);
         ViewModelProviderFactory<ChartViewModel> factory = new ViewModelProviderFactory<>(ChartViewModel.class, supplier);
         return new ViewModelProvider(activity, factory).get(ChartViewModel.class);
+    }
+
+    @Provides
+    @ActivityScope
+    TableMappingViewModel provideTableMappingViewModel(Repository repository, Context application) {
+        Supplier<TableMappingViewModel> supplier = () -> new TableMappingViewModel(repository, (MVVMApplication) application);
+        ViewModelProviderFactory<TableMappingViewModel> factory = new ViewModelProviderFactory<>(TableMappingViewModel.class, supplier);
+        return new ViewModelProvider(activity, factory).get(TableMappingViewModel.class);
     }
 }

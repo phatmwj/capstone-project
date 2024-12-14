@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="a"
+            type="winwin.customer.app.ui.flexibleadapter.TableMappingActivity" />
+        <variable
+            name="vm"
+            type="winwin.customer.app.ui.flexibleadapter.TableMappingViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:id="@+id/table_mapping_layout_header"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_44sdp"
+            android:layout_alignParentTop="true"
+            android:background="@color/black">
+
+            <TextView
+                android:id="@+id/table_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="Chọn bàn"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/_17ssp"
+                android:textStyle="bold"
+                android:layout_marginLeft="@dimen/_5sdp"/>
+
+        </RelativeLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/pos_table_gridview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:overScrollMode="never"/>
+    </LinearLayout>
+</layout>

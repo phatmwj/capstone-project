@@ -188,5 +188,13 @@ dependencies {
     //chart ui
     implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
 
+    //Flexible Adapter
+    final flexible_adapter_version = 'c8013533';
+    implementation "com.github.arkon.FlexibleAdapter:flexible-adapter:$flexible_adapter_version"
+    implementation "com.github.arkon.FlexibleAdapter:flexible-adapter-databinding:$flexible_adapter_version"
+    implementation "com.github.arkon.FlexibleAdapter:flexible-adapter-livedata:$flexible_adapter_version"
+    implementation "com.github.arkon.FlexibleAdapter:flexible-adapter-ui:$flexible_adapter_version"
+
+    implementation 'com.sunmi:printerx:1.0.17'
 }
 apply plugin: 'com.google.gms.google-services'

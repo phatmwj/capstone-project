@@ -4,6 +4,7 @@ import winwin.customer.app.di.module.ActivityModule;
 import winwin.customer.app.di.scope.ActivityScope;
 import winwin.customer.app.ui.chart.ChartActivity;
 import winwin.customer.app.ui.edittext.EdittextActivity;
+import winwin.customer.app.ui.flexibleadapter.TableMappingActivity;
 import winwin.customer.app.ui.home.HomeActivity;
 import winwin.customer.app.ui.login.LoginActivity;
 import winwin.customer.app.ui.main.MainActivity;
@@ -39,5 +40,7 @@ public interface ActivityComponent {
 
     void inject(MQTTActivity mqttActivity);
     void inject(ChartActivity chartActivity);
+
+    void inject(TableMappingActivity tableMappingActivity);
 }
 
