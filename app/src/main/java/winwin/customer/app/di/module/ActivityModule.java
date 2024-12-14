@@ -22,6 +22,7 @@ import winwin.customer.app.ui.otp.ForgetPasswordOTPViewModel;
 import winwin.customer.app.ui.otp.LoginOTPViewModel;
 import winwin.customer.app.ui.profile.EditProfileViewModel;
 import winwin.customer.app.ui.rxjava.TestViewModel;
+import winwin.customer.app.ui.sunmiD3mini.D3MiniViewModel;
 import winwin.customer.app.ui.welcome.WelcomeViewModel;
 import winwin.customer.app.ui.splashform.SplashFormViewModel;
 import winwin.customer.app.utils.GetInfo;
@@ -165,5 +166,13 @@ public class ActivityModule {
         Supplier<TableMappingViewModel> supplier = () -> new TableMappingViewModel(repository, (MVVMApplication) application);
         ViewModelProviderFactory<TableMappingViewModel> factory = new ViewModelProviderFactory<>(TableMappingViewModel.class, supplier);
         return new ViewModelProvider(activity, factory).get(TableMappingViewModel.class);
+    }
+
+    @Provides
+    @ActivityScope
+    D3MiniViewModel provideD3MiniViewModel(Repository repository, Context application) {
+        Supplier<D3MiniViewModel> supplier = () -> new D3MiniViewModel(repository, (MVVMApplication) application);
+        ViewModelProviderFactory<D3MiniViewModel> factory = new ViewModelProviderFactory<>(D3MiniViewModel.class, supplier);
+        return new ViewModelProvider(activity, factory).get(D3MiniViewModel.class);
     }
 }

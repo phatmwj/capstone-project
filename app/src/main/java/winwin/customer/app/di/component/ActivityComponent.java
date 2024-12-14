@@ -15,6 +15,7 @@ import winwin.customer.app.ui.otp.ForgetPasswordOTPActivity;
 import winwin.customer.app.ui.otp.LoginOTPActivity;
 import winwin.customer.app.ui.profile.EditProfileActivity;
 import winwin.customer.app.ui.rxjava.TestActivity;
+import winwin.customer.app.ui.sunmiD3mini.D3MiniActivity;
 import winwin.customer.app.ui.welcome.WelcomeActivity;
 import winwin.customer.app.ui.input.phone.PhoneActivity;
 import winwin.customer.app.ui.splashform.SplashFormActivity;
@@ -42,5 +43,7 @@ public interface ActivityComponent {
     void inject(ChartActivity chartActivity);
 
     void inject(TableMappingActivity tableMappingActivity);
+
+    void inject(D3MiniActivity d3MiniActivity);
 }
 
