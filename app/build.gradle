@@ -196,5 +196,8 @@ dependencies {
     implementation "com.github.arkon.FlexibleAdapter:flexible-adapter-ui:$flexible_adapter_version"
 
     implementation 'com.sunmi:printerx:1.0.17'
+
+    //
+    implementation 'joda-time:joda-time:2.10.10'
 }
 apply plugin: 'com.google.gms.google-services'

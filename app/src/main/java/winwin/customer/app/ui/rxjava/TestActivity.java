@@ -41,7 +41,8 @@ public class TestActivity extends BaseActivity<ActivityTestBinding, TestViewMode
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        testObservableMerge();
+//        testObservableMerge();
+        viewBinding.weekView.setShadow(viewBinding.myshadow);
     }
 
     public void testObservableMerge(){
